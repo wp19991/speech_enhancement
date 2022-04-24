@@ -1,0 +1,8 @@
+from PyQt5.QtWidgets import QWidget
+from ui.help_frame import Ui_Frame as help_frame
+
+
+class help_win(QWidget, help_frame):
+    def __init__(self, parent=None):
+        super(help_win, self).__init__(parent)
+        self.setupUi(self)

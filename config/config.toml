@@ -1,0 +1,6 @@
+[general]
+version = "v1.0.0"
+skin = "config/skin/white.qss"
+
+[update]
+lastcheckday = 2022-04-24

@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+.idea/
+/other/
+/core/speech_enhancement_core/SEGAN/model.pkl

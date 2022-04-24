@@ -1,0 +1,47 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>icon/耳朵.png</file>
+    <file>icon/常见问题／相关问题2.png</file>
+    <file>icon/305信息-圆框.png</file>
+    <file>icon/录音.png</file>
+    <file>icon/app.ico</file>
+    <file>icon/close.svg</file>
+    <file>icon/minimize.svg</file>
+    <file>icon/plus.svg</file>
+    <file>icon/png_to_ico.py</file>
+    <file>icon/qss.ico</file>
+    <file>icon/帮助.ico</file>
+    <file>icon/保存.ico</file>
+    <file>icon/编辑.ico</file>
+    <file>icon/饼图.ico</file>
+    <file>icon/错误.ico</file>
+    <file>icon/代码文件.ico</file>
+    <file>icon/关闭.ico</file>
+    <file>icon/关闭文件夹.ico</file>
+    <file>icon/结束.ico</file>
+    <file>icon/结束.png</file>
+    <file>icon/曲线图.ico</file>
+    <file>icon/设置.ico</file>
+    <file>icon/首页.ico</file>
+    <file>icon/探测声音.ico</file>
+    <file>icon/探测声音.png</file>
+    <file>icon/提示.ico</file>
+    <file>icon/图书.ico</file>
+    <file>icon/未选中.ico</file>
+    <file>icon/文件夹 .ico</file>
+    <file>icon/文件夹.ico</file>
+    <file>icon/信息.ico</file>
+    <file>icon/选中.ico</file>
+    <file>icon/扬声器.ico</file>
+    <file>icon/语音.ico</file>
+    <file>icon/运行.ico</file>
+    <file>icon/运行.png</file>
+    <file>icon/正确.ico</file>
+  </qresource>
+  <qresource prefix="img">
+    <file>image/American_Robin.jpg</file>
+    <file>image/fish.png</file>
+    <file>image/plt_wav.jpg</file>
+    <file>image/splash.png</file>
+  </qresource>
+</RCC>
