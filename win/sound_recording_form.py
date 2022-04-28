@@ -83,7 +83,7 @@ class sound_recording_win(QWidget, sound_recording_frame):
 
     def save_name_event(self):
         self.show_save_path_label.setText(
-            "文件保存在：" + self.sound_recording_save_path_lineEdit.text() + "\\" + self.save_name_lineEdit.text() + ".wav")
+            "文件保存在\n" + self.sound_recording_save_path_lineEdit.text() + "\\" + self.save_name_lineEdit.text() + ".wav")
 
     def sound_recording_save_path_event(self):
         logger.info("保存文件的路径按钮设置")

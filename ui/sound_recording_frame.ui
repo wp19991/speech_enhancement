@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>551</width>
-    <height>447</height>
+    <width>507</width>
+    <height>434</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,6 +20,37 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLCDNumber" name="lcdNumber">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>90</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>999999</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>Algerian</family>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <property name="lineWidth">
+      <number>2</number>
+     </property>
+     <property name="smallDecimalPoint">
+      <bool>false</bool>
+     </property>
      <property name="mode">
       <enum>QLCDNumber::Dec</enum>
      </property>
@@ -32,6 +63,17 @@
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="2">
       <widget class="QPushButton" name="sound_recording_save_path_pushButton">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="cursor">
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
@@ -45,6 +87,12 @@
      </item>
      <item row="0" column="1">
       <widget class="QLineEdit" name="sound_recording_save_path_lineEdit">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
        <property name="readOnly">
         <bool>true</bool>
        </property>
@@ -52,6 +100,11 @@
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>文件名</string>
        </property>
@@ -62,6 +115,17 @@
      </item>
      <item row="1" column="2">
       <widget class="QPushButton" name="save_name_pushButton">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="cursor">
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
@@ -74,10 +138,22 @@
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLineEdit" name="save_name_lineEdit"/>
+      <widget class="QLineEdit" name="save_name_lineEdit">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+      </widget>
      </item>
      <item row="0" column="0">
       <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;语音保存路径&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
@@ -88,6 +164,23 @@
      </item>
      <item row="2" column="1">
       <widget class="QLabel" name="show_save_path_label">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="toolTip">
         <string>最后文件保存的路径以及文件名显示</string>
        </property>
@@ -102,6 +195,23 @@
     <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
       <widget class="QPushButton" name="sound_recording_save_path_start_pushButton">
+       <property name="minimumSize">
+        <size>
+         <width>90</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>120</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="cursor">
         <cursorShape>PointingHandCursor</cursorShape>
        </property>
@@ -112,8 +222,8 @@
         <string>开始</string>
        </property>
        <property name="icon">
-        <iconset>
-         <normaloff>:/icon/resources/icon/运行.ico</normaloff>:/icon/resources/icon/运行.ico</iconset>
+        <iconset resource="../res/app.qrc">
+         <normaloff>:/icon/icon/运行.png</normaloff>:/icon/icon/运行.png</iconset>
        </property>
       </widget>
      </item>
@@ -121,6 +231,23 @@
       <widget class="QPushButton" name="sound_recording_save_path_end_pushButton">
        <property name="enabled">
         <bool>false</bool>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>90</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>150</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="cursor">
         <cursorShape>PointingHandCursor</cursorShape>
@@ -132,8 +259,8 @@
         <string>结束并保存文件</string>
        </property>
        <property name="icon">
-        <iconset>
-         <normaloff>:/icon/resources/icon/结束.ico</normaloff>:/icon/resources/icon/结束.ico</iconset>
+        <iconset resource="../res/app.qrc">
+         <normaloff>:/icon/icon/结束.png</normaloff>:/icon/icon/结束.png</iconset>
        </property>
        <property name="checkable">
         <bool>false</bool>

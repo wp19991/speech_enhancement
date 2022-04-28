@@ -139,9 +139,6 @@ class main_widget(QWidget, m_widget):
         self.figure = plt.figure()
         self.canvas = FigureCanvas(self.figure)
 
-        # 开始隐藏窗口
-        self.enh_wav_plt_label.hide()
-
         # 选择模式
         self.choose_model_comboBox.currentTextChanged.connect(self.choose_model_comboBox_event)
 
@@ -274,7 +271,6 @@ class main_widget(QWidget, m_widget):
         self.main_data.plt_save_path = fig_name
 
     def choose_model_comboBox_event(self):
-        self.enh_wav_plt_label.hide()
         self.update_data_pushButton.setEnabled(False)
         self.paly_wav_file_pushButton.setEnabled(False)
         self.paly_enh_wav_file_pushButton.setEnabled(False)
@@ -344,10 +340,10 @@ class main_widget(QWidget, m_widget):
     def enh_event(self):
         logger.info("进行语音增强的按钮设置")
         # 判断上面的路径是否存在
-        if not os.path.exists(self.main_data.noisy_wav_path):
+        if self.main_data.noisy_wav_path is None or not os.path.exists(self.main_data.noisy_wav_path):
             logger.error("没有这个文件:{}，请重新选择".format(self.main_data.noisy_wav_path))
             return
-        if not os.path.exists(self.main_data.save_path):
+        if self.main_data.save_path is None or not os.path.exists(self.main_data.save_path):
             logger.error("没有这个文件夹:{}，请重新选择".format(self.main_data.save_path))
             return
 
@@ -410,7 +406,6 @@ class main_widget(QWidget, m_widget):
         logger.info("播放原始文件的按钮设置")
         self.t_play_wav_file = Thread(target=self.play_wav_file)
         self.t_play_wav_file.start()
-        # self.play(self.main_data.noisy_wav_path)
 
     def play_wav_file(self):
         wf = wave.open(self.main_data.noisy_wav_path, 'rb')
@@ -447,24 +442,3 @@ class main_widget(QWidget, m_widget):
         stream.stop_stream()
         stream.close()
         p.terminate()
-
-    def action_sound_recording_event(self):
-        logger.info("录音窗口")
-        if self.srw is not None:
-            self.srw.destroy(True)
-        self.srw = sound_recording_win()
-        self.srw.show()
-
-    def action_about_event(self):
-        logger.info("关于窗口")
-        if self.aw is not None:
-            self.aw.destroy(True)
-        self.aw = about_win()
-        self.aw.show()
-
-    def action_help_event(self):
-        logger.info("帮助窗口")
-        if self.hw is not None:
-            self.hw.destroy(True)
-        self.hw = help_win()
-        self.hw.show()
