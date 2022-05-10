@@ -297,8 +297,9 @@ class main_widget(QWidget, m_widget):
         if filePath == "":
             logger.error("请选择路径")
             return
-        self.save_model_file_path_lineEdit.setText(filePath[0])
-        self.main_data.model_path = filePath[0]
+        if filePath[0] != "":
+            self.save_model_file_path_lineEdit.setText(filePath[0])
+            self.main_data.model_path = filePath[0]
 
     def need_enh_wav_file_path_event(self):
         logger.info("选择需要增强的语音文件按钮设置")
@@ -327,9 +328,11 @@ class main_widget(QWidget, m_widget):
             self.need_enh_wav_file_path_lineEdit.setText(filePath[0] + ".wav")
             self.main_data.noisy_wav_path = filePath[0] + ".wav"
             return
-        logger.info("need_enh_wav_file_path=" + filePath[0])
-        self.need_enh_wav_file_path_lineEdit.setText(filePath[0])
-        self.main_data.noisy_wav_path = filePath[0]
+        if filePath[0] != "":
+            logger.info("need_enh_wav_file_path=" + filePath[0])
+            self.need_enh_wav_file_path_lineEdit.setText(filePath[0])
+            self.main_data.noisy_wav_path = filePath[0]
+            return
 
     def save_path_event(self):
         logger.info("设置文件保存的路径按钮设置")
@@ -340,10 +343,10 @@ class main_widget(QWidget, m_widget):
     def enh_event(self):
         logger.info("进行语音增强的按钮设置")
         # 判断上面的路径是否存在
-        if self.main_data.noisy_wav_path is None or not os.path.exists(self.main_data.noisy_wav_path):
+        if not os.path.exists(self.main_data.noisy_wav_path):
             logger.error("没有这个文件:{}，请重新选择".format(self.main_data.noisy_wav_path))
             return
-        if self.main_data.save_path is None or not os.path.exists(self.main_data.save_path):
+        if not os.path.exists(self.main_data.save_path):
             logger.error("没有这个文件夹:{}，请重新选择".format(self.main_data.save_path))
             return
 
@@ -406,6 +409,7 @@ class main_widget(QWidget, m_widget):
         logger.info("播放原始文件的按钮设置")
         self.t_play_wav_file = Thread(target=self.play_wav_file)
         self.t_play_wav_file.start()
+        # self.play(self.main_data.noisy_wav_path)
 
     def play_wav_file(self):
         wf = wave.open(self.main_data.noisy_wav_path, 'rb')
@@ -442,3 +446,24 @@ class main_widget(QWidget, m_widget):
         stream.stop_stream()
         stream.close()
         p.terminate()
+
+    def action_sound_recording_event(self):
+        logger.info("录音窗口")
+        if self.srw is not None:
+            self.srw.destroy(True)
+        self.srw = sound_recording_win()
+        self.srw.show()
+
+    def action_about_event(self):
+        logger.info("关于窗口")
+        if self.aw is not None:
+            self.aw.destroy(True)
+        self.aw = about_win()
+        self.aw.show()
+
+    def action_help_event(self):
+        logger.info("帮助窗口")
+        if self.hw is not None:
+            self.hw.destroy(True)
+        self.hw = help_win()
+        self.hw.show()

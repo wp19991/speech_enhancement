@@ -1,10 +1,13 @@
 import sys
 import os
+
 from PyQt5.QtWidgets import QApplication
 from loguru import logger
 
 from utils import global_var as gl
 from config import logs
+from utils.connect_mysql import db
+from win.login_form import login_form
 from win.splash.splash import SplashScreen
 
 os.chdir(os.path.dirname(__file__))
@@ -18,12 +21,17 @@ class App(QApplication):
 
     def run(self, pytest=False):
         logger.info("程序启动 ...")
+
         splash = SplashScreen()  # 启动界面
         splash.loadProgress()  # 启动界面
+
         from win.main_win import main_win
         self.windows["main"] = main_win()
-        self.windows["main"].show()
         splash.finish(self.windows["main"])  # 启动界面
+
+        self.windows["login"] = login_form(self.windows["main"])
+        self.windows["login"].show()
+
         if not pytest:
             sys.exit(self.exec_())
 
@@ -31,4 +39,5 @@ class App(QApplication):
 if __name__ == "__main__":
     logs.setting()  # log 设置
     gl.__init()  # 全局变量
+    db.connect()
     App().run()

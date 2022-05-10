@@ -39,6 +39,7 @@
     <file>icon/正确.ico</file>
   </qresource>
   <qresource prefix="img">
+    <file>image/register.jpg</file>
     <file>image/American_Robin.jpg</file>
     <file>image/fish.png</file>
     <file>image/plt_wav.jpg</file>

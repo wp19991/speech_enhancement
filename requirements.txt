@@ -1,4 +1,4 @@
-pyqt5~=5.15.4
+pyqt5
 PyQtChart
 pyqt5-tools
 loguru~=0.6.0

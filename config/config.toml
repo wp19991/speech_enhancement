@@ -1,6 +1,12 @@
 [general]
-version = "v1.0.0"
+version = "v1.0.1"
+language = ""
 skin = "config/skin/white.qss"
 
-[update]
-lastcheckday = 2022-04-24
+[mysql]
+host = "127.0.0.1"
+port = 3306
+user = "root"
+password = "password"
+database = 'bysj_db'
+

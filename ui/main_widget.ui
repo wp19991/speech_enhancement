@@ -6,15 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>590</width>
-    <height>482</height>
+    <width>550</width>
+    <height>433</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>语音增强-客户端</string>
+   <string>语音增强</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">QTableWidget QComboBox{
+    margin: 2px;
+    border: none;
+}</string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout_3">
    <item>
@@ -34,22 +37,15 @@
      </item>
      <item>
       <widget class="QLabel" name="label_2">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>60</height>
-        </size>
-       </property>
        <property name="font">
         <font>
-         <family>华文楷体</family>
-         <pointsize>26</pointsize>
+         <pointsize>25</pointsize>
          <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
        <property name="text">
-        <string>语音增强-客户端</string>
+        <string>语音增强</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -57,18 +53,25 @@
       </widget>
      </item>
      <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="1">
         <widget class="QComboBox" name="choose_model_comboBox">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>30</height>
-          </size>
-         </property>
          <property name="font">
           <font>
-           <pointsize>11</pointsize>
+           <pointsize>13</pointsize>
           </font>
          </property>
          <property name="cursor">
@@ -105,7 +108,7 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>12</pointsize>
+           <pointsize>13</pointsize>
           </font>
          </property>
          <property name="cursor">
@@ -126,7 +129,7 @@
         <widget class="QLabel" name="label_3">
          <property name="font">
           <font>
-           <pointsize>12</pointsize>
+           <pointsize>11</pointsize>
           </font>
          </property>
          <property name="text">
@@ -142,7 +145,7 @@
         <widget class="QLabel" name="label">
          <property name="font">
           <font>
-           <pointsize>12</pointsize>
+           <pointsize>11</pointsize>
           </font>
          </property>
          <property name="text">
@@ -161,11 +164,6 @@
            <height>30</height>
           </size>
          </property>
-         <property name="font">
-          <font>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
          <property name="readOnly">
           <bool>true</bool>
          </property>
@@ -181,7 +179,7 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>12</pointsize>
+           <pointsize>13</pointsize>
           </font>
          </property>
          <property name="cursor">
@@ -209,11 +207,6 @@
            <height>30</height>
           </size>
          </property>
-         <property name="font">
-          <font>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
          <property name="readOnly">
           <bool>true</bool>
          </property>
@@ -229,7 +222,7 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>12</pointsize>
+           <pointsize>13</pointsize>
           </font>
          </property>
          <property name="cursor">
@@ -257,14 +250,6 @@
            <height>30</height>
           </size>
          </property>
-         <property name="font">
-          <font>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>werw</string>
-         </property>
          <property name="readOnly">
           <bool>true</bool>
          </property>
@@ -274,7 +259,7 @@
         <widget class="QLabel" name="label_7">
          <property name="font">
           <font>
-           <pointsize>12</pointsize>
+           <pointsize>11</pointsize>
           </font>
          </property>
          <property name="text">
@@ -289,7 +274,7 @@
         <widget class="QLabel" name="label_6">
          <property name="font">
           <font>
-           <pointsize>12</pointsize>
+           <pointsize>11</pointsize>
           </font>
          </property>
          <property name="text">
@@ -306,12 +291,12 @@
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>30</height>
+           <height>40</height>
           </size>
          </property>
          <property name="font">
           <font>
-           <pointsize>12</pointsize>
+           <pointsize>13</pointsize>
           </font>
          </property>
          <property name="cursor">
@@ -380,7 +365,8 @@ QProgressBar:chunk{
         <widget class="QLabel" name="label_4">
          <property name="font">
           <font>
-           <pointsize>10</pointsize>
+           <family>Agency FB</family>
+           <pointsize>11</pointsize>
           </font>
          </property>
          <property name="text">
@@ -416,7 +402,7 @@ QProgressBar:chunk{
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>30</height>
+           <height>40</height>
           </size>
          </property>
          <property name="font">
@@ -454,7 +440,7 @@ QProgressBar:chunk{
       <widget class="QLabel" name="enh_show_data_label">
        <property name="font">
         <font>
-         <pointsize>12</pointsize>
+         <pointsize>11</pointsize>
         </font>
        </property>
        <property name="toolTip">
@@ -503,9 +489,14 @@ QProgressBar:chunk{
          </property>
          <property name="minimumSize">
           <size>
-           <width>120</width>
+           <width>150</width>
            <height>50</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
          </property>
          <property name="cursor">
           <cursorShape>PointingHandCursor</cursorShape>
@@ -549,9 +540,14 @@ QProgressBar:chunk{
          </property>
          <property name="minimumSize">
           <size>
-           <width>120</width>
+           <width>150</width>
            <height>50</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
          </property>
          <property name="cursor">
           <cursorShape>PointingHandCursor</cursorShape>
@@ -560,9 +556,8 @@ QProgressBar:chunk{
           <string>播放增强后的文件</string>
          </property>
          <property name="text">
-          <string>  播放
-语音增强
-后的文件</string>
+          <string>播放语音增强
+ 后的文件</string>
          </property>
          <property name="icon">
           <iconset resource="../res/app.qrc">
