@@ -17,3 +17,4 @@ scipy
 pydub
 pymysql
 paramiko
+peewee

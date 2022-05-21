@@ -28,6 +28,7 @@ class App(QApplication):
         from win.main_win import main_win
         self.windows["main"] = main_win()
         splash.finish(self.windows["main"])  # 启动界面
+        
 
         self.windows["login"] = login_form(self.windows["main"])
         self.windows["login"].show()

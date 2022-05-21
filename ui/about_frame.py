@@ -18,6 +18,11 @@ class Ui_Frame(object):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/icon/resources/icon/信息.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Frame.setWindowIcon(icon)
+        Frame.setStyleSheet("QTextBrowser#new_version_function_textBrowser{\n"
+" background-color: rgba(0,0,0,0);\n"
+" selection-background-color:#88bbff;\n"
+" border: 0px solid rgba(0,0,0,0);\n"
+"}")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(Frame)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.horizontalLayout = QtWidgets.QHBoxLayout()
@@ -165,8 +170,18 @@ class Ui_Frame(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'SimSun\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;\"><span style=\" background-color:#ffffff;\">(new）2022-05-10 新增数据库操作</span><br />                 支持用户登录,管理员登录增删改查个人信息</p>\n"
-"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;\"><span style=\" font-family:\'JetBrains Mono\',\'monospace\'; font-size:9.8pt; color:#000000;\">1.支持</span><span style=\" font-family:\'宋体\',\'monospace\'; font-size:9.8pt; color:#080808;\">输入语音文件<br />2.支持录音<br />  2.1.录音的时候显示波形<br />3.对语音文件进行增强<br />  3.1.支持切换不同的处理模式<br />  3.2.支持选择模型<br />  3.3.显示处理的进度<br />4.显示处理后的文件频谱图<br />5.支持播放原始语音文件和增强后的语音文件<br />6.显示帮助<br />  6.1.显示作者信息</span></p></body></html>"))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">(new）2022-05-10 新增数据库操作 支持用户登录,管理员登录增删改查个人信息</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> 1.支持输入语音文件</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> 2.支持录音</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">   2.1.录音的时候显示波形</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> 3.对语音文件进行增强 </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">   3.1.支持切换不同的处理模式</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">   3.2.支持选择模型</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">   3.3.显示处理的进度</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> 4.显示处理后的文件频谱图</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> 5.支持播放原始语音文件和增强后的语音文件</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"> 6.显示帮助</p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">   6.1.显示作者信息</p></body></html>"))
         self.download_new_version_pushButton.setToolTip(_translate("Frame", "调用浏览器打开下载的网页"))
         self.download_new_version_pushButton.setText(_translate("Frame", "下载更新安装包"))
 from res import app_rc

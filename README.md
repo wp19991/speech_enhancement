@@ -41,7 +41,7 @@
     - about_form.py (关于窗口的逻辑处理)
     - help_form.py (帮助窗口的逻辑处理)
     - login_form.py (登录界面的逻辑处理)
-    - mysql_form.py (注册界面的逻辑处理)
+    - register_form.py (注册界面的逻辑处理)
     - mysql_form.py (数据库管理界面的逻辑处理)
     - main_widget.py (语音增强窗口的逻辑处理)
     - sound_recording_frame.py (录音窗口的逻辑处理)
@@ -102,7 +102,7 @@
 
 - 显示帮助
     - [√]显示作者信息
-    - [×]输出帮助文档pdf文件
+    - [√]显示帮助文档
 
 ## Environmental installation
 

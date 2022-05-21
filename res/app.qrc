@@ -38,6 +38,29 @@
     <file>icon/运行.png</file>
     <file>icon/正确.ico</file>
   </qresource>
+  <qresource prefix="bz">
+    <file>bz/1.png</file>
+    <file>bz/2.png</file>
+    <file>bz/3.png</file>
+    <file>bz/4.png</file>
+    <file>bz/5.png</file>
+    <file>bz/6.png</file>
+    <file>bz/7.png</file>
+    <file>bz/8.png</file>
+    <file>bz/9.png</file>
+    <file>bz/10.png</file>
+    <file>bz/11.png</file>
+    <file>bz/12.png</file>
+    <file>bz/13.png</file>
+    <file>bz/14.png</file>
+    <file>bz/15.png</file>
+    <file>bz/16.png</file>
+    <file>bz/17.png</file>
+    <file>bz/18.png</file>
+    <file>bz/19.png</file>
+    <file>bz/20.png</file>
+    <file>bz/21.png</file>
+  </qresource>
   <qresource prefix="img">
     <file>image/register.jpg</file>
     <file>image/American_Robin.jpg</file>
